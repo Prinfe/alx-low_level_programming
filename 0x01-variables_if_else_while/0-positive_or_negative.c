@@ -1,13 +1,13 @@
 #include <stdlib.h> 
-#include <time.h> 
-#include <stdio.h> 
-/** 
-* main - Determine if a number is positive, negative or zero. 
-* 
-* Return: always 0 
-*/ 
-int main(void) 
-{ 
+ #include <time.h> 
+ #include <stdio.h> 
+ /** 
+  * main - Determine if a number is positive, negative or zero. 
+  * 
+  * Return: always zero
+ */ 
+ int main(void) 
+ { 
          int n; 
   
          srand(time(0)); 
