@@ -1,14 +1,14 @@
 #include <stdlib.h> 
- #include <time.h> 
- #include <stdio.h> 
+#include <time.h> 
+#include <stdio.h> 
  /** 
   * main - Determine if a number is positive, negative or zero. 
   * 
   * Return: always zero
  */ 
- int main(void) 
+int main(void) 
  { 
-         int n; 
+int n; 
   
          srand(time(0)); 
          n = rand() - RAND_MAX / 2; 
