@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main() {
-
-	printf("_putchar");
+int main(void) 
+{
+	printf("_putchar: ");
 
 	return 0;
 
