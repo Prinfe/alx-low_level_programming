@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
-* puts2 - function thats prints every character of a string
-* @str: pointer parameter
-* Author: Prinfe 
-*/
+ * puts2 - prints every other character
+ * @str: string
+ *
+ * Return: nothing
+ */
+
 void puts2(char *str)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
-	while (str[i] != '\0')
+	while (*(str + i) != '\0')
 	{
 		if (i % 2 == 0)
-			putchar(str[i]);
+			putchar(*(str + i));
 		i++;
 	}
-	putchar('\n');
+	putchar(10);
 }
