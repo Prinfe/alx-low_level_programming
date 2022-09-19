@@ -2,26 +2,35 @@
 #include "main.h"
 
 /**
- * puts_half - This function prints half of a string followed by a new line.
- * @str: pointer parameter
+ * _atoi - This function converts a string to an integer.
+ * @s: Pointer parameter
+ * Return: returns an integer value
  */
-void puts_half(char *str)
+int _atoi(char *s)
 {
-	int count = 0, i;
+	unsigned int count = 0, size = 0, j = 0, k = 1, m = 1, i;
 
-	while (count >= 0)
+	while (*(s + count) != '\0')
 	{
-		if (str[count] == '\0')
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
 			break;
+
+		if (*(s + count) == '-')
+			k *= -1;
+
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		{
+			if (size > 0)
+				m *= 10;
+			size++;
+		}
 		count++;
 	}
 
-	if (count % 2 == 1)
-		i = count / 2;
-	else
-		i = (count - 1) / 2;
-
-	for (i++; i < count; i++)
-		putchar(str[i]);
-	putchar('\n');
+	for (i = count - size; i < count; i++)
+	{
+		j = j + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+	return (j * k);
 }
