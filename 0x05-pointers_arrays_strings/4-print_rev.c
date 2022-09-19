@@ -5,7 +5,6 @@
  * @s: pointer parameter
  * Author: sammykingx
  */
-
 void print_rev(char *s)
 {
 	int i = 0;
