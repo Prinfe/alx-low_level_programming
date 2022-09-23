@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-Int _putchar (char c);
+int _putchar (char c);
 #include <stdio.h>
 /**
  *void prototypes()
